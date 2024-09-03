@@ -13,8 +13,7 @@ SECRET_KEY = "django-insecure-h0+9*xv3fb))cdmcqq77nn$w9via7=9vg-dq5zbqd$2+hnfg&%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.2.3']
-
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -39,7 +38,7 @@ INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",    
+    "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -98,38 +97,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-# REST_FRAMEWORK ={
-#     'DEFAULT_PERMISSION_CLASSES':['rest_framework.permissions.AllowAny']
-# }
-
-# CORS_ALLOW_ALL_ORIGINS = True
-
-# CORS_ALLOW_HEADERS =[
-#     'access-control-allow-origin',
-#     'content-type',
-# ]
-
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:8000",
-#     "http://127.0.0.1:8000",
-#     "http://192.168.2.3:8000",
-# ]
-
-# CORS_ORIGIN_WHITELIST = [
-#     "http://localhost:8000",
-#     "http://127.0.0.1:8000",
-#     "http://192.168.2.3:8000",
-# ]
-
-# CORS_ALLOW_METHODS=[
-#     'GET'
-#     'OPTIONS',
-#     'DELETE',
-#     'POST',
-#     'PUT'
-# ]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+CORS_ALLOWED_ORIGINS = [    
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+]
