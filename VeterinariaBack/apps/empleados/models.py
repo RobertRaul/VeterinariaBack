@@ -23,6 +23,10 @@ class Ubigeo(models.Model):
     class Meta:
         verbose_name = "Ubigeo"
         verbose_name_plural = "Ubigeos"
+        db_table = 'Ubigeo'
+
+    def __str__(self):
+        return self.Ubigeo
 
 
 class Empleado(models.Model):
@@ -44,3 +48,4 @@ class Empleado(models.Model):
     class Meta:
         verbose_name = "Empleado"
         verbose_name_plural = "Empleados"
+        db_table = 'Empleado'

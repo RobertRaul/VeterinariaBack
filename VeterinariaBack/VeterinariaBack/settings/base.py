@@ -29,8 +29,14 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     "apps.empleados",
+    "apps.clientes",
 ]
-THIRD_APPS = ["rest_framework", "corsheaders"]
+THIRD_APPS = [
+    "rest_framework",
+    "corsheaders",
+    "rest_framework.authtoken",
+    "rest_framework_simplejwt",
+]
 
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
@@ -103,7 +109,16 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-CORS_ALLOWED_ORIGINS = [    
+CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]
+
+# AUTH_USER_MODEL = 'clientes.Clientes'
+
+
+# REST_FRAMEWORK = {
+#     "DEFAULT_AUTHENTICATION_CLASSES": (
+#         "rest_framework_simplejwt.authentication.JWTAuthentication",
+#     )
+# }
