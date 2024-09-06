@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ["192.168.2.3"]
 DATABASES = {
     "default": {
         "ENGINE": "mssql",
-        "NAME": "dbzoolomascotas",
+        "NAME": "sis_zoolomascotas",
         "USER": "sa",
         "PASSWORD": "123456",
         "HOST": "localhost",
