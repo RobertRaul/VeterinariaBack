@@ -31,10 +31,7 @@ LOCAL_APPS = [
     'apps.vet',
 ]
 THIRD_APPS = [
-    "rest_framework",
-    "corsheaders",
-    "rest_framework.authtoken",
-    "rest_framework_simplejwt",
+    "rest_framework",       
 ]
 
 
